@@ -41,3 +41,81 @@
     transform: rotate(360deg);
   }
 }
+
+.topDiv {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  padding-top: 10px;
+  background-color: navy;
+  color: white;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  margin-bottom: 40px;
+  
+}
+
+
+.closeDiv {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.leaflet-top {
+  margin-top: 40px;
+  
+}
+
+.downloadDiv {
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.backDiv {
+  padding-right: 10px;
+}
+
+.titleDiv {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hamburger {
+  margin-left: 10px;
+}
+
+
+
+
+
+.sidebar {
+  
+  width: 350px;
+  height: 100vh;
+  background-color: darkslategrey;
+  color:white;
+  position: fixed;
+  top:40px;
+  left: 0;
+  transition: 850ms;
+  padding-left: 20px;
+  padding-top: 20px;
+  z-index: 999;
+}
+
+.no-sidebar {
+  width: 350px;
+  height: 100vh;
+  background-color: darkslategrey;
+ left: -100%;
+ 
+  position: fixed;
+  top:40px;
+  
+  transition: 850ms;
+  padding-left: 20px;
+  padding-top: 20px;
+  z-index: 999;
+}

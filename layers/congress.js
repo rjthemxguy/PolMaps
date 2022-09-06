@@ -8,13 +8,21 @@ export const CongressLayer = ({data}) => {
     const onEachClick = (feature, layer) => {
         console.log("test");
 
-        const name = feature.properties.DISTRICT;
-        const inc = feature.properties.INC;
-        const votingAge = feature.properties.CVAP_19
+        const District = feature.properties.DISTRICT;
+        const Population = feature.properties.POPULATION;
+        const CVA = feature.properties.CVAP_19;
+        const HSP = feature.properties.HSP_CVAP_1;
+        const  AA = feature.properties.DOJ_NH_BLK;
+        const  WHT = feature.properties.NH_WHT_CVA;
+        const  ASN = feature.properties.DOJ_NH_ASN;
 
         layer.bindPopup(
-            "Disrict: <b>" + name + "</b><br>Incumbent: <b>" + inc + "</b><br>" +
-            "Citizens Voting Age:" + votingAge 
+            "Congressional District: <b>" + District + "</b><hr>Population: " + Population +
+            "<br>Citizens of Voting Age (CVA): " + CVA +
+            "<br>Hispanic CVA: " + HSP + 
+            "<br>African American CVA: " + AA +
+            "<br>Asian CVA: " + ASN+ 
+            "<br>White CVA: " + WHT
           );
 
           layer.on({ click: handleFeatureClick });
@@ -27,13 +35,13 @@ export const CongressLayer = ({data}) => {
     
         const layer = e.target;
     
-        layer.setStyle({ color: "yellow" });
+        layer.setStyle({ color: "green" });
       };
 
     const layer = (<GeoJSON  data = {data}
         onEachFeature = {onEachClick}
         ref={geoJsonRef}
-        color="orange"
+        color="black"
     ></GeoJSON>)
 
     return (

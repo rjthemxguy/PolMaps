@@ -6,6 +6,7 @@ import { congress } from '../data/congress';
 import { AssemblyLayer } from '../layers/assembly';
 import { SenateLayer } from '../layers/senate';
 import { CongressLayer } from '../layers/congress';
+import  Navbar from '../components/navbar';
 
 
 const Map = () => {
@@ -14,7 +15,9 @@ const Map = () => {
 
   return (
     <div className="App">
+     <Navbar/>
       <MapContainer center={[34.0483, -117.2612]} zoom={9} scrollWheelZoom={false}>
+      
        <LayersControl position="topright">
          <LayersControl.BaseLayer checked name="Legislative Map">
         <TileLayer
